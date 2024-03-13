@@ -31,7 +31,6 @@ let getCurrentWeatherActor =
     let rec loop () =
       actor {
         let! getCurrentMsg = mailbox.Receive()
-
         match getCurrentMsg with
         | GetCurrentRequest request ->
           let baseUri =

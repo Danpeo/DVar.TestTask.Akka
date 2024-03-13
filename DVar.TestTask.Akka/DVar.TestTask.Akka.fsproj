@@ -17,6 +17,7 @@
       <PackageReference Include="Akka.FSharp" Version="1.5.17.1" />
       <PackageReference Include="Akka.Hosting" Version="1.5.17.1" />
       <PackageReference Include="Akka.Persistence.FSharp" Version="1.5.17.1" />
+      <PackageReference Include="Akka.TestKit.Xunit2" Version="1.5.17.1" />
     </ItemGroup>
 
 </Project>
