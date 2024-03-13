@@ -30,6 +30,15 @@ type Location =
     LocaltimeEpoch: int
     LocalTime: string }
 
+type Day =
+  { Maxtemp_C: float
+    Avgtemp_C: float
+    Condition: WeatherCondition }
+
+type Forecastday = { Date: string; Day: Day }
+
+type Forecast = { Forecastdats: Forecastday array }
+
 type GetCurrentResponse =
   { Location: Location; Current: Current }
 
@@ -37,8 +46,15 @@ type GetCurrentRequest =
   { SearchQuery: string
     ApiKey: string
     Language: string option }
-  
 
 type GetCurrentMessage =
   | GetCurrentRequest of GetCurrentRequest
   | CancelRequest
+
+type GetForecastRequest =
+  { Days: int
+    GetCurrentRequest: GetCurrentRequest }
+  
+type GetForecastMessage =
+  | GetForecastRequest of GetForecastRequest
+  | CancelForecastRequest
