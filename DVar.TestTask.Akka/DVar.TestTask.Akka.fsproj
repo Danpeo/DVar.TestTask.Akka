@@ -6,7 +6,17 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="Program.fs"/>
+        <Compile Include="AkkaSystems.fs" />
+        <Compile Include="Types.fs" />
+        <Compile Include="WeatherActors.fs" />
+        <Compile Include="Systems.fs" />
+        <Compile Include="Program.fs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Akka.FSharp" Version="1.5.17.1" />
+      <PackageReference Include="Akka.Hosting" Version="1.5.17.1" />
+      <PackageReference Include="Akka.Persistence.FSharp" Version="1.5.17.1" />
     </ItemGroup>
 
 </Project>
